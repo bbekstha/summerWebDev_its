@@ -1,6 +1,9 @@
 {
-  "name": "project1",
+  "name": "its_webDev_vueCLI",
   "version": "0.1.0",
+  "author": {
+     "name": "Bibek Shrestha"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

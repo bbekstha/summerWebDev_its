@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id='ogB'>
+		<button class='button' @click='stockClick'> Stock </button>
+		<button class='button' @click='repoClick'> Repo </button>
+		<button class='button' @click='protectedClick'> Protected </button>
+		<button class='button' @click='prsnSearchClick'> Person </button>
+		</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+	export default {
+		name: 'home',
+		methods: {
+			stockClick: function() {
+				this.$router.push('/stock')
+			},
+			repoClick: function() {
+				this.$router.push('/repo')
+			},
+			protectedClick: function() {
+				this.$router.push('/protected')
+			},
+			prsnSearchClick: function() {
+				this.$router.push('/personSearch')
+			}
+		}
+	}
 </script>
