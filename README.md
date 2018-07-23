@@ -1,4 +1,4 @@
-# project1
+# its_webDev_VueCLI
 
 ## Project setup
 ```
@@ -19,10 +19,10 @@ npm run build
 ```
 npm run lint
 ```
-#### Project Goals
+### Project Goals
    Reproduce the vanillaJS version of the website with VueJS CLI to compare pros and cons of each approach
 
-#### Project layout
+### Project layout
 - public
    - index.html
       - Base html which contains root div for content rendering.
@@ -57,10 +57,10 @@ npm run lint
    - This file.
 
 
-#### Programming approach
-#### Pros
+### Programming approach
+### Pros
 - Easier code management for large scale app by using modules managed by vue
 
-#### Cons
+### Cons
 - Compared to cdn implementation, node and other
    various package installation is required.
