@@ -23,14 +23,14 @@ npm run lint
    Reproduce the vanillaJS version of the website with VueJS CLI to compare pros and cons of each approach
 
 ### Project layout
-- public
+- ./public
    - index.html
       - Base html which contains root div for content rendering.
 
-- src
-   - assets: Contains media and other files used in the website.
-   - components: Contains definition for the components used in the website.
-   - routesFunctionalities: Contains implementation of the functionalities
+- ./src
+   - ./assets: Contains media and other files used in the website.
+   - ./components: Contains definition for the components used in the website.
+   - ./routesFunctionalities: Contains implementation of the functionalities
     for different component and views
       - cookieFunction.js
          - Contains getter and setter methods for cookie storage.
@@ -38,7 +38,7 @@ npm run lint
          - Contains function to create and modify the DOM elements.
       - stock.js, repo.js, protected.js, personSearch.js
          - Contains functions to handle functionalities of respective components
-   - views: Contains definitions for the routing views.
+   - ./views: Contains definitions for the routing views.
       - home.vue, stock.vue, repo.vue, protectedCont.vue, searchPerson.vue
          - Contains template, props, and methods for the respective views.
    - App.vue
