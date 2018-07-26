@@ -1,3 +1,5 @@
+<!-- Initial component created when the project was setup -->
+
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>

@@ -1,3 +1,5 @@
+<!-- One of the initial views created when the project was setup -->
+
 <template>
   <div class="home">
     <img src="../assets/logo.png">

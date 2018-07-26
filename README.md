@@ -58,8 +58,18 @@ npm run lint
 
 
 ### Programming approach
+   - Script files under routesFunctionalities folder that handle the
+      functionalities use either fetch or XHTTP request call to retrieve
+      related data in JSON format. The JSON is then parsed to populate
+      dynamically created table for users to see.
+   - As mentioned above, the vue files under views folder defines the template,
+      props and methods used by available route paths.
+      - As required they also import helper functions exported
+        from the above mentioned script files. This helps in code management
+        for large apps and is one of the advantages of using the VueJS CLI.
+
 ### Pros
-- Easier code management for large scale app by using modules managed by vue
+- Easier code management and debugging for large scale app by using modules managed by vue
 
 ### Cons
 - Compared to cdn implementation, node and other

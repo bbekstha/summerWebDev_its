@@ -8,19 +8,21 @@ import './format.css'
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  render: h => h(App),
-  mounted: function(){
-     let keyUrl = location.hash.substring(1);
-     if (keyUrl.includes("id_token")){
-        var id_tokenVal = keyUrl.substring("id_token=".length, keyUrl.indexOf("&"))
-        var exprIndex = keyUrl.indexOf("expires_in") + "expires_in=".length
-        var exprVal = keyUrl.substring(exprIndex, keyUrl.indexOf("&", exprIndex))
+   router,
+   render: h => h(App),
+   mounted: function(){
+      let keyUrl = location.hash.substring(1);
+      if (keyUrl.includes("id_token")){
+         var id_tokenVal = keyUrl.substring(keyUrl.indexOf("id_token=") +
+          "id_token=".length, keyUrl.indexOf("&"))
+         var exprIndex = keyUrl.indexOf("expires_in") + "expires_in=".length
+         var exprVal = keyUrl.substring(exprIndex,
+          keyUrl.indexOf("&", exprIndex))
 
-        setCookie("id_token", id_tokenVal, exprVal);
-        window.location = window.location.origin
-     }
-  }
+         setCookie("id_token", id_tokenVal, exprVal);
+         window.location = window.location.origin
+      }
+   }
 }).$mount('#app')
 
 // For each route check if authentication is required

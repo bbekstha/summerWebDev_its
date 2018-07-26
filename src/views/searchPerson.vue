@@ -1,7 +1,7 @@
 
 <template>
 	<div id='contentItems'>
-		<input type='text' id="Input" @keyup.enter='findPerson' v-model='searchParam'>
+		<input type='text' id="Input" @keyup.enter='findPerson'  v-model='searchParam'>
 		<button class='button' @click='findPerson'> Search </button>
 		<button id='homeBtn' class='button' @click='goHome'> Go Home </button>
 	</div>
