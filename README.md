@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
+
+### More info on VueJS CLI basics and development:
+- https://cli.vuejs.org/guide/
+
 ### Project Goals
    Reproduce the vanillaJS version of the website with VueJS CLI to compare pros and cons of each approach
 

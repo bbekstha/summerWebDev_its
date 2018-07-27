@@ -3,13 +3,19 @@ import { getCookie } from './cookieFunction.js'
 
 // Redirect to login if missing cookie with name 'id_token'
 export function authenticate() {
-	if (getCookie("id_token") == ""){
-		let client_id = "2fior6770hvto4u6kuq084j7fu";
-		let redirect_uri = "http://localhost:3000";
+	let cookieVal = getCookie("id_token")
+	let client_id = "2fior6770hvto4u6kuq084j7fu";
+	let redirect_uri = "http://localhost:3000";
+	if (cookieVal == ""){
 		let loginUrl = `https://cognito-dev.calpoly.edu/login?response_type=token&` +
 		`client_id=${client_id}&redirect_uri=${redirect_uri}`;
 
 		window.location = loginUrl
+	} else if ((new Date(cookieVal.expDate) - new Date())/60000 <= 30) {
+      let update_url = `https://cognito-dev.calpoly.edu/oauth2/authorize?` +
+		 `response_type=token&client_id=${client_id}&redirect_uri=${redirect_uri}`
+         console.log("update_url")
+         window.location = update_url;
 	}
 }
 
@@ -17,7 +23,7 @@ export function protectedContent(){
 	console.log("inside protectedContent()");
 
 	authenticate();
-	let id_token = getCookie('id_token');
+	let id_token = getCookie('id_token').value;
 
 	createParagraph("display", "contentItems");
 	createTable("petsTable", "contentItems");
